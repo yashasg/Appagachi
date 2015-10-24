@@ -47,6 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DragItem.cs" />
      <Compile Include="Assets\Scripts\EatClick.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\NavigationManager.cs" />
+     <Compile Include="Assets\Scripts\VerificationManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
