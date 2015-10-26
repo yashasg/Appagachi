@@ -2,9 +2,13 @@
 using System.Collections;
 
 public class DisplaypPinInput : MonoBehaviour {
+
+	public PillDrop PD;
 	// Use this for initialization
 	void Start () {
 	
+		PD = GetComponent<PillDrop> ();
+		PD.activate = false;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +22,7 @@ public class DisplaypPinInput : MonoBehaviour {
 	public void panelInactive(GameObject pPinInput)
 	{
 		pPinInput.SetActive(false);
+		PD.activate = true;
 	}
 
 

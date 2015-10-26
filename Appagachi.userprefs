@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Timer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DisplaypPinInput.cs">
     <Files>
-      <File FileName="Assets\Scripts\Timer.cs" Line="21" Column="6" />
+      <File FileName="Assets\Scripts\Timer.cs" Line="38" Column="1" />
+      <File FileName="Assets\Scripts\PillDrop.cs" Line="27" Column="33" />
+      <File FileName="Assets\Scripts\DisplaypPinInput.cs" Line="17" Column="3" />
+      <File FileName="c:\Users\u1011486\Desktop\Repo\Appagachi\Assets\Scripts\DisplaypSettingsPanel.cs" Line="10" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
