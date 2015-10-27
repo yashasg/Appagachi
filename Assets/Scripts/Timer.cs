@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
     float fTimer;
+	//public PillDrop PD;
     public UnityEngine.UI.Text lTimer;
     public UnityEngine.UI.Button bPill1;
 	public UnityEngine.UI.Text bPillName;
@@ -42,6 +43,8 @@ public class Timer : MonoBehaviour {
 		{
 			lTimer.color=Color.red;
 			bPill1.enabled=true;
+			//PD.activate = true;
+
         }
 	}
 }
