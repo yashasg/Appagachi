@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour {
 		if (float.TryParse (sTimeUnits [0], out fMinutes)&& float.TryParse(sTimeUnits [1],out fSeconds )) {
 			fMinutes*=60;
 			fTimer=fMinutes+fSeconds;
-			Debug.Log("In Start"+string.Format("Timer="+fTimer));
+			//Debug.Log("In Start"+string.Format("Timer="+fTimer));
 		}
     }
 	
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour {
 			int iRemSec=(int)(roundedRestSeconds%60);
 			//fTimer/60;
 			lTimer.text = string.Format("{0:00}:{1:00}",iRemMin,iRemSec);
-			Debug.Log("Mins "+iRemMin+"Secs "+iRemSec);
+			//Debug.Log("Mins "+iRemMin+"Secs "+iRemSec);
 
         }
         if (fTimer <= 0f)
