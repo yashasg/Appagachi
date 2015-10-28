@@ -7,8 +7,6 @@ public class DisplaypPinInput : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		PD = GetComponent<PillDrop> ();
-		PD.activate = false;
 	}
 	
 	// Update is called once per frame
