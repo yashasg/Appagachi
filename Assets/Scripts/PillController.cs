@@ -5,6 +5,8 @@ public class PillController : MonoBehaviour
 {
 
     float fTimer;
+	public GameObject PinPanel;
+
     public class PillData
     {
         public string name;
@@ -62,7 +64,8 @@ public class PillController : MonoBehaviour
         if (fTimer <= 0f)
         {
             timerText.color = Color.red;
+			PinPanel.SetActive(true);
             //enabled = true;
-        };
+        }
     }
 }
