@@ -4,11 +4,11 @@ using System.Collections;
 public class DisplaypSettingsPanel : MonoBehaviour {
 
 
-	public PillDrop PD;
-	// Use this for initialization
-	void Start () {
-		PD = GetComponent<PillDrop> ();
-	}
+	//public PillDrop PD;
+    // Use this for initialization
+    void Start () {
+		//PD = GetComponent<PillDrop> ();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -16,8 +16,9 @@ public class DisplaypSettingsPanel : MonoBehaviour {
 	}
 	
 	public void panelActive(GameObject pPinInput)
-	{	pPinInput.SetActive(true);
-	}
+	{
+        pPinInput.SetActive(true);
+    }
 	public void panelInactive(GameObject pPinInput)
 	{
 		pPinInput.SetActive(false);

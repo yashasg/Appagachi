@@ -5,7 +5,9 @@ public class PillController : MonoBehaviour
 {
 
     float fTimer;
-	public GameObject PinPanel;
+    float fCountDownTime;
+	//public GameObject PinPanel;
+    
 
     public class PillData
     {
@@ -32,13 +34,20 @@ public class PillController : MonoBehaviour
     void Start()
     {
         float fMinutes, fSeconds;
+		if (data == null) {
+			data = new PillData("asd", "00:15", 3);
+		}
         initialTime = data.frequency;
+       // initialTime = "0:10";
+
         nameText.text = data.name;
         string[] sTimeUnits = initialTime.Split(":".ToCharArray());
         if (float.TryParse(sTimeUnits[0], out fMinutes) && float.TryParse(sTimeUnits[1], out fSeconds))
         {
+          //  fSeconds = 10;
             fMinutes *= 60;
             fTimer = fMinutes + fSeconds;
+            fCountDownTime = fTimer;
             Debug.Log("In Start" + string.Format("Timer=" + timerText));
         }
     }
@@ -46,26 +55,43 @@ public class PillController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(fTimer);
+        //PinPanel.SetActive(true);
+        //Debug.Log(fTimer);
         if (fTimer > 0)
         {
 
             //enabled = false;
+            timerText.color = Color.white;
             fTimer = fTimer - Time.deltaTime;
             int roundedRestSeconds = Mathf.CeilToInt(fTimer);
             int iRemMin = (int)(roundedRestSeconds / 60);
             int iRemSec = (int)(roundedRestSeconds % 60);
             //fTimer/60;
             timerText.text = string.Format("{0:00}:{1:00}", iRemMin, iRemSec);
-            Debug.Log("Mins "+iRemMin+"Secs "+iRemSec);
-            Debug.Log(fTimer);
+            //Debug.Log("Mins "+iRemMin+"Secs "+iRemSec);
+            //Debug.Log(fTimer);
 
         }
         if (fTimer <= 0f)
         {
             timerText.color = Color.red;
-			PinPanel.SetActive(true);
+            fTimer = 60*60;
+            if (!PillListController.timerPanel.activeSelf)
+            {
+                PillListController.timerPanel.SetActive(true);
+            }
+            
+            //Debug.Log("");
+            //PinPanel.gameObject.SetActive(true);
+            //PinPanel.SetActive(true);
+            //Debug.Log(PinPanel.activeSelf);
             //enabled = true;
         }
+    }
+
+    public void resetTimer()
+    {
+        Animator anim = PillListController.character.GetComponent<Animator>();
+        anim.SetTrigger("sad");
     }
 }

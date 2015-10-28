@@ -6,6 +6,8 @@ public class PillListController : MonoBehaviour
 
     public GameObject pillContentPanel;
     public GameObject pillPanel;
+    public static GameObject timerPanel;
+    public static GameObject character;
 
     public UnityEngine.UI.InputField pillNameText;
     public UnityEngine.UI.InputField pillFrequencyText;
@@ -14,7 +16,9 @@ public class PillListController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        timerPanel = GameObject.Find("TimerPanel");
+        character = GameObject.Find("Character");
+        timerPanel.SetActive(false);
     }
 
     // Update is called once per frame
