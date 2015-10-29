@@ -7,7 +7,7 @@ public class PillController : MonoBehaviour
     float fTimer;
     float fCountDownTime;
 	//public GameObject PinPanel;
-    
+	public GameObject character;
 
     public class PillData
     {
@@ -80,7 +80,9 @@ public class PillController : MonoBehaviour
             {
                 PillListController.timerPanel.SetActive(true);
             }
-            
+			AnimationManager.Instance.AnimateSad();
+			//anim.setTrigger("sad");
+
             //Debug.Log("");
             //PinPanel.gameObject.SetActive(true);
             //PinPanel.SetActive(true);
