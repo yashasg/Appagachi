@@ -35,7 +35,7 @@ public class PillController : MonoBehaviour
     {
         float fMinutes, fSeconds;
 		if (data == null) {
-			data = new PillData("asd", "00:15", 3);
+			data = new PillData("Dexedrine", "00:15", 3);
 		}
         initialTime = data.frequency;
        // initialTime = "0:10";
