@@ -36,7 +36,6 @@ public class PillDrop : MonoBehaviour {
 
 		if (pImage.GetComponent<RectTransform>().position.y <= 1.78f) 
 		{
-			Time.timeScale = 0;
 			pImage.gameObject.SetActive(false); 
 		}
 	}
